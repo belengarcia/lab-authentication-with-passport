@@ -8,6 +8,7 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const passport = require('passport');
 
 
 mongoose.Promise = Promise;
@@ -55,6 +56,7 @@ const index = require('./routes/index');
 const passportRouter = require("./routes/passportRouter");
 app.use('/', index);
 app.use('/', passportRouter);
+
 
 
 module.exports = app;
